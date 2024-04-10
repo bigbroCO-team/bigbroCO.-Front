@@ -1,5 +1,5 @@
 {
-  "name": "bigbroco.-client",
+  "name": "bigbroco.-front",
   "scripts": {
     "client": "pnpm --filter client",
     "admin": "pnpm --filter admin",
