@@ -1,0 +1,17 @@
+{
+  "name": "bigbroco.-client",
+  "scripts": {
+    "client": "pnpm --filter client",
+    "admin": "pnpm --filter admin",
+    "eslint-config-custom": "pnpm --filter eslint-config-custom"
+  },
+  "private": true,
+  "license": "MIT",
+  "bugs": {
+    "email": "bigbrocodev@gmail.com"
+  },
+  "dependencies": {
+    "eslint": "^8",
+    "typescript": "^5"
+  }
+}
