@@ -4,7 +4,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   plugins: ['unused-imports', '@typescript-eslint'],
-  extends: ['plugin:prettier/recommended'],
+  extends: ['plugin:prettier/recommended', 'next/core-web-vitals'],
   rules: {
     // 사용하지 않는 import문을 error 처리
     'unused-imports/no-unused-imports-ts': ['error'],
