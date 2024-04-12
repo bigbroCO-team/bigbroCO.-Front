@@ -3,6 +3,7 @@
   "scripts": {
     "client": "pnpm --filter client",
     "admin": "pnpm --filter admin",
+    "storybook": "pnpm --filter storybook",
     "eslint-config-custom": "pnpm --filter eslint-config-custom"
   },
   "private": true,
