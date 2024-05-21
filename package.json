@@ -5,7 +5,8 @@
     "admin": "pnpm --filter admin",
     "storybook": "pnpm --filter storybook",
     "tsconfig": "pnpm --filter tsconfig",
-    "eslint-config-custom": "pnpm --filter eslint-config-custom"
+    "eslint-config-custom": "pnpm --filter eslint-config-custom",
+    "share-components": "pnpm --filter share-components"
   },
   "private": true,
   "license": "MIT",
@@ -13,6 +14,8 @@
     "email": "bigbrocodev@gmail.com"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "eslint": "^8",
     "typescript": "^5"
   }
