@@ -1,9 +1,7 @@
-/** @type { import('@storybook/nextjs').StorybookConfig } */
-const config = {
-  stories: [
-    '../../../client/src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-    '../../../admin/src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-  ],
+import type { StorybookConfig } from '@storybook/nextjs';
+
+const config: StorybookConfig = {
+  stories: ['../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
@@ -14,9 +12,6 @@ const config = {
   framework: {
     name: '@storybook/nextjs',
     options: {},
-  },
-  docs: {
-    autodocs: 'tag',
   },
 };
 export default config;
