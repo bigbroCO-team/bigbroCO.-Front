@@ -1,5 +1,4 @@
 import { ThemeProvider } from '@emotion/react';
-
 import { theme } from '@/styles';
 
 interface Props {
