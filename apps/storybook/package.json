@@ -2,7 +2,7 @@
   "name": "storybook",
   "version": "1.0.0",
   "dependencies": {
-    "tsconfig": "workspace:^"
+    "share-components": "workspace:^"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
