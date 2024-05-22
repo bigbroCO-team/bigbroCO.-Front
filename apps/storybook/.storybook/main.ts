@@ -1,7 +1,11 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
-  stories: ['../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../../client/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../../admin/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../../../packages/share-components/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+  ],
   addons: [
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
@@ -13,5 +17,22 @@ const config: StorybookConfig = {
     name: '@storybook/nextjs',
     options: {},
   },
+  docs: {
+    autodocs: 'tag',
+  },
+  babel: async (config) => ({
+    ...config,
+    presets: [
+      [
+        'next/babel',
+        {
+          'preset-react': {
+            runtime: 'automatic',
+            importSource: '@emotion/react',
+          },
+        },
+      ],
+    ],
+  }),
 };
 export default config;
