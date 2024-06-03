@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { theme } from '@/styles';
+import { theme } from '../../styles';
 
 interface Props {
   readonly children: React.ReactNode;
