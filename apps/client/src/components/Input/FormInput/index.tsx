@@ -25,7 +25,11 @@ const FormInput = forwardRef<HTMLInputElement, Props>(
         <S.Name>{name}</S.Name>
         <S.InputWrapper>
           <S.Input
-            type={type === InputType.TEXT || !isHidden ? type : InputType.TEXT}
+            type={
+              type === InputType.TEXT || !isHidden
+                ? InputType.TEXT
+                : InputType.PASSWORD
+            }
             placeholder={placeHolder}
             isError={!!errorMessage}
             ref={ref}
