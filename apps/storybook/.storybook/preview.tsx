@@ -9,8 +9,26 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      backgrounds: {
+        default: 'default',
+        values: [
+          {
+            name: 'default',
+            value: '#F5F6F8',
+          },
+          {
+            name: 'light',
+            value: '#ffffff',
+          },
+          {
+            name: 'dark',
+            value: '#050505',
+          },
+        ],
+      },
     },
   },
+
   decorators: [
     (Story) => (
       <Provider>
