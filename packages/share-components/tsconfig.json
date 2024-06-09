@@ -2,9 +2,8 @@
   "extends": "tsconfig/react-component.json",
   "compilerOptions": {
     "jsxImportSource": "@emotion/react",
-    "rootDir": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "share-components/*": ["./src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -42,7 +42,7 @@ const typo = {
 };
 
 const color = {
-  main: '#FF952B',
+  main: { 50: '#FF952B', 100: '#2C46FF' },
   error: '#DF454A',
   grey: {
     50: '#F2F2F2',
