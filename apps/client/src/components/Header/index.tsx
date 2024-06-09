@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 export const Header = () => {
   const router = useRouter();
-  const segement = useSelectedLayoutSegment();
-  const navigator = (props) => {
+  const segment = useSelectedLayoutSegment();
+  const navigator = (props:string) => {
     router.push(props);
   };
   const [scrollValue, setScrollValue] = useState(0);
@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <>
-      <S.Container type={scrollValue} path={segement}>
+      <S.Container type={scrollValue} path={segment}>
         <S.Nav type={'logo'} onClick={() => navigator('/')}>
           BIGBRO COMPANY
         </S.Nav>
