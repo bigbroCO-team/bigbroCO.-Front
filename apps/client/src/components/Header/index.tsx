@@ -5,7 +5,7 @@ import { useState } from 'react';
 export const Header = () => {
   const router = useRouter();
   const segment = useSelectedLayoutSegment();
-  const navigator = (props:string) => {
+  const navigator = (props: string) => {
     router.push(props);
   };
   const [scrollValue, setScrollValue] = useState(0);
