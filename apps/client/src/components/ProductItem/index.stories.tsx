@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof ProductItem> = {
   component: ProductItem,
   args: {
-    productImg: 'name',
+    productImgUrl: 'name',
     discountPercent: '20',
     price: '25000',
     productName: 'Big Bro T-shirt',

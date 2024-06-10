@@ -3,21 +3,21 @@
 import * as S from './style';
 
 interface Props {
-  productImg: string;
+  productImgUrl: string;
   discountPercent: string;
   price: string;
   productName: string;
 }
 
 const ProductItem: React.FC<Props> = ({
-  productImg,
+  productImgUrl,
   discountPercent,
   price,
   productName,
 }) => {
   return (
     <S.Wrapper>
-      <S.ImgContainer>{productImg}</S.ImgContainer>
+      <S.ImgContainer src={productImgUrl} />
       <S.PriceInform>
         <S.DiscountText>{discountPercent}%</S.DiscountText>
         <S.PriceText>{Number(price).toLocaleString()}</S.PriceText>

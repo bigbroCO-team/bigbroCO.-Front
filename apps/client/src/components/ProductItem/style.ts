@@ -8,10 +8,10 @@ export const Wrapper = styled.div`
   gap: 0.75rem;
 `;
 
-export const ImgContainer = styled.div`
+export const ImgContainer = styled.img`
   width: 24.75rem;
   height: 24.75rem;
-  background-color: black;
+  object-fit: cover;
 `;
 
 export const PriceInform = styled.div`
