@@ -13,8 +13,6 @@ export const Header = () => {
     setScrollValue(window.scrollY);
   });
 
-  console.log(segment);
-
   return (
     <>
       <S.Container type={scrollValue} path={segment}>
