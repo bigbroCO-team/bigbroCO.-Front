@@ -13,30 +13,32 @@ export const Header = () => {
     setScrollValue(window.scrollY);
   });
 
+  console.log(segment);
+
   return (
     <>
       <S.Container type={scrollValue} path={segment}>
-        <S.Nav type={'logo'} onClick={() => navigator('/')}>
+        <S.Nav type={'logo'} path={segment} onClick={() => navigator('/')}>
           BIGBRO COMPANY
         </S.Nav>
         <S.NavWrapper>
-          <S.Nav type={'nav'} onClick={() => navigator(`/CBWAS`)}>
+          <S.Nav type={'CBWAS'} path={segment} onClick={() => navigator(`/CBWAS`)}>
             CBWAS
           </S.Nav>
-          <S.Nav type={'nav'} onClick={() => navigator(`/S.C.B`)}>
+          <S.Nav type={'S.C.B'} path={segment} onClick={() => navigator(`/S.C.B`)}>
             S.C.B
           </S.Nav>
-          <S.Nav type={'nav'} onClick={() => navigator(`/BIGBRO`)}>
+          <S.Nav type={'BIGBRO'} path={segment} onClick={() => navigator(`/BIGBRO`)}>
             BIGBRO
           </S.Nav>
-          <S.Nav type={'nav'} onClick={() => navigator(`/GONGNEWGI`)}>
+          <S.Nav type={'GONGNEWGI'} path={segment} onClick={() => navigator(`/GONGNEWGI`)}>
             GONGNEWGI
           </S.Nav>
-          <S.Nav type={'nav'} onClick={() => navigator(`/SCULFEE`)}>
+          <S.Nav type={'SCULFEE'} path={segment} onClick={() => navigator(`/SCULFEE`)}>
             SCULFEE
           </S.Nav>
         </S.NavWrapper>
-        <S.Nav type={'nav'} onClick={() => navigator(`/login`)}>
+        <S.Nav type={'Login'} path={segment} onClick={() => navigator(`/login`)}>
           Login
         </S.Nav>
       </S.Container>

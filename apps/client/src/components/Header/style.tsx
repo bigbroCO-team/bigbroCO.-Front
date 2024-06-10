@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import '../../styles/globalStyle.css';
 
-export const Container = styled.header<{ type; path }>`
+export const Container = styled.header<{ type: number; path: string | null }>`
   display: flex;
   position: fixed;
   width: 100%;
@@ -22,8 +22,13 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Nav = styled.nav<{ type }>`
-  color: ${(props) => (props.type === 'logo' ? '#fff' : '#8c8c8c')};
+export const Nav = styled.nav<{ type: string; path: string | null }>`
+  color: ${(props) =>
+    props.type === 'logo'
+      ? '#fff'
+      : props.path === props.type
+        ? '#FF952B'
+        : '#8c8c8c'};
   font-family: 'ImFellGreatPrimer';
   font-size: 1.5rem;
   font-style: normal;
