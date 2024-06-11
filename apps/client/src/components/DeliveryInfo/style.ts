@@ -27,7 +27,6 @@ export const DeliveryText = styled.p<{
   isArrive: boolean;
 }>`
   ${({ theme }) => theme.typo.bodyMedium};
-  color: ${({ theme }) => theme.color.white};
   color: ${({ theme, isPreparing, isArrive }) =>
     isPreparing
       ? isArrive
