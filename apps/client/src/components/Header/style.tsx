@@ -8,12 +8,8 @@ export const Container = styled.header<{ type: number; path: string | null }>`
   padding: 1.5rem 0;
   justify-content: space-around;
   align-items: flex-end;
-  background: ${(props) =>
-    props.path !== null
-      ? 'black'
-      : props.type > window.innerHeight
-        ? 'black'
-        : null};
+  background: ${({ type, path }) =>
+    path !== null ? 'black' : type > window.innerHeight ? 'black' : null};
 `;
 
 export const NavWrapper = styled.div`
@@ -23,12 +19,8 @@ export const NavWrapper = styled.div`
 `;
 
 export const Nav = styled.nav<{ type: string; path: string | null }>`
-  color: ${(props) =>
-    props.type === 'logo'
-      ? '#fff'
-      : props.path === props.type
-        ? '#FF952B'
-        : '#8c8c8c'};
+  color: ${({ type, path }) =>
+    type === 'logo' ? '#fff' : path === type ? '#FF952B' : '#8c8c8c'};
   font-family: 'ImFellGreatPrimer';
   font-size: 1.5rem;
   font-style: normal;
