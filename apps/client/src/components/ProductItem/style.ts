@@ -31,6 +31,6 @@ export const PriceText = styled.p`
 `;
 
 export const ClothesText = styled.p`
-  ${({ theme }) => theme.typo.bodyLarge};
+  ${({ theme }) => theme.typo.bodySmall};
   color: ${({ theme }) => theme.color.white};
 `;
