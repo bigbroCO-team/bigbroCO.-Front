@@ -26,7 +26,5 @@ export const Nav = styled.nav<{ type: string; path: string | null }>`
     return path === type ? theme.color.main[50] : theme.color.grey[500];
   }};
   font-family: 'ImFellGreatPrimer';
-  font-size: 1.5rem;
-  font-style: normal;
-  line-height: normal;
+  font-size: ${({ theme }) => theme.typo.titleSmall};
 `;
