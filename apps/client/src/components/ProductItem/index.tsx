@@ -1,6 +1,7 @@
 'use client';
 
 import * as S from './style';
+import { numberLocalString } from 'client/utils';
 
 interface Props {
   productImgUrl: string;
@@ -20,7 +21,7 @@ const ProductItem: React.FC<Props> = ({
       <S.ImgContainer src={productImgUrl} />
       <S.PriceInform>
         <S.DiscountText>{discountPercent}%</S.DiscountText>
-        <S.PriceText>{Number(price).toLocaleString()}</S.PriceText>
+        <S.PriceText>{numberLocalString(price)}</S.PriceText>
       </S.PriceInform>
       <S.ClothesText>{productName}</S.ClothesText>
     </S.Wrapper>
