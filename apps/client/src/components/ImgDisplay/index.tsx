@@ -2,18 +2,25 @@ import { useState } from 'react';
 import * as S from './style';
 
 interface Props {
-  ImgList: string[];
+  imgList: string[];
 }
 
-const ImgDisplay: React.FC<Props> = ({ ImgList }) => {
-  const [mainImg, setMainImg] = useState<string>(ImgList[0]);
+const ImgDisplay: React.FC<Props> = ({ imgList }) => {
+  const [mainImg, setMainImg] = useState<string>(imgList[0]);
 
   return (
     <S.Container>
-      <S.MainImgContainer>
-        <S.MainImg src={mainImg} alt='상품 이미지' />
-      </S.MainImgContainer>
-      <S.SubImgContainer></S.SubImgContainer>
+      <S.MainImg src={mainImg} />
+      <S.SubImgContainer>
+        {[...imgList].map((img) => (
+          <S.SubImg
+            key={img}
+            src={img}
+            isSelected={img === mainImg}
+            onClick={() => setMainImg(img)}
+          />
+        ))}
+      </S.SubImgContainer>
     </S.Container>
   );
 };

@@ -1,5 +1,5 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import Image from 'next/image';
 
 export const Container = styled.div`
   display: flex;
@@ -7,16 +7,26 @@ export const Container = styled.div`
   gap: 0.75rem;
 `;
 
-export const MainImgContainer = styled.div`
-  width: 10rem;
-  height: 10rem;
-`;
-
-export const MainImg = styled(Image)`
-  width: 10rem;
+export const MainImg = styled.img`
+  width: 37.5rem;
+  height: 37.5rem;
+  object-fit: contain;
 `;
 
 export const SubImgContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  gap: 0.75rem;
+  width: 37.5rem;
+`;
+
+export const SubImg = styled.img<{ isSelected: boolean }>`
+  ${({ theme, isSelected }) =>
+    isSelected &&
+    css`
+      border: 0.125rem solid ${theme.color.main[50]};
+    `};
+  width: 5.625rem;
+  height: 5.625rem;
+  object-fit: contain;
+  cursor: pointer;
 `;
