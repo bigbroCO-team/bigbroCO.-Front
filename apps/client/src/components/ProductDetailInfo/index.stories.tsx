@@ -6,7 +6,6 @@ const meta: Meta<typeof ProductDetailInfo> = {
   args: {
     productName: 'Big Bro T-shirt',
     productPercent: 15,
-    productPrice: 25000,
     usuallyPrice: 30000,
   },
 };
@@ -15,4 +14,14 @@ export default meta;
 
 type Story = StoryObj<typeof ProductDetailInfo>;
 
-export const Primary: Story = {};
+export const Sale: Story = {
+  args: {
+    isSale: true,
+  },
+};
+
+export const NotSale: Story = {
+  args: {
+    isSale: false,
+  },
+};
