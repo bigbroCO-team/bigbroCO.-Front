@@ -6,6 +6,8 @@ interface Props {
   productPercent: number;
   usuallyPrice: number;
   isSale: boolean;
+  descriptionTitle: string;
+  descriptionContent: string;
 }
 
 const ProductDetailInfo: React.FC<Props> = ({
@@ -13,6 +15,8 @@ const ProductDetailInfo: React.FC<Props> = ({
   productPercent,
   usuallyPrice,
   isSale,
+  descriptionTitle,
+  descriptionContent,
 }) => {
   const salePrice = isSale
     ? (usuallyPrice * (1 - productPercent / 100)).toLocaleString()
@@ -46,6 +50,11 @@ const ProductDetailInfo: React.FC<Props> = ({
           </S.ShareButton>
         </S.ProductPrice>
       </S.ProductInfoBox>
+      <div>
+        <S.DescriptionText>{descriptionTitle}</S.DescriptionText>
+        <br />
+        <S.DescriptionText>{descriptionContent}</S.DescriptionText>
+      </div>
     </S.Wrapper>
   );
 };

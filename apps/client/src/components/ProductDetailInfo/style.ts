@@ -73,3 +73,8 @@ export const SVGBox = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const DescriptionText = styled.p`
+  ${({ theme }) => theme.typo.bodySmall};
+  color: ${({ theme }) => theme.color.white};
+`;
