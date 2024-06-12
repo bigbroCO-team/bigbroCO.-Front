@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import '../../styles/globalStyle.css';
 
 export const Container = styled.header<{ type: number; path: string | null }>`
   display: flex;
