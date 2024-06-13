@@ -20,6 +20,7 @@ const CheckProduct: React.FC<Props> = ({
   isSale,
 }) => {
   const [priceCount, setPriceCount] = useState<number>(1);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   const cntCalculator = (isPlus: boolean) => {
     setPriceCount((prev) => {
@@ -35,8 +36,12 @@ const CheckProduct: React.FC<Props> = ({
   return (
     <S.Wrapper>
       <S.ProductInfoBox>
-        <S.CheckBoxContainer>
-          <CheckBox />
+        <S.CheckBoxContainer
+          onClick={() => {
+            setIsClicked(!isClicked);
+          }}
+        >
+          <CheckBox isClicked={isClicked} />
         </S.CheckBoxContainer>
         <S.ProductMainInfo>
           <S.ProductImg src={productImg} />
