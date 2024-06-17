@@ -62,7 +62,7 @@ export const ShareButton = styled.button`
   padding: 1rem;
   align-items: flex-start;
   gap: 0.625rem;
-  border-radius: 50rem;
+  border-radius: 50%;
   border: 0.0625rem solid ${({ theme }) => theme.color.grey[300]};
 `;
 
