@@ -22,6 +22,8 @@ const ProductDetailInfo: React.FC<Props> = ({
     ? (usuallyPrice * (1 - productPercent / 100)).toLocaleString()
     : usuallyPrice.toLocaleString();
 
+  const productPrice = usuallyPrice.toLocaleString();
+
   return (
     <S.Wrapper>
       <S.ProductInfoBox>
@@ -34,7 +36,7 @@ const ProductDetailInfo: React.FC<Props> = ({
                   <S.ProductPercent>{productPercent}%</S.ProductPercent>
                   <S.ActualPriceText>{salePrice}원</S.ActualPriceText>
                 </S.ActualPriceBox>
-                <S.UsuallyPrice>{usuallyPrice.toLocaleString()}</S.UsuallyPrice>
+                <S.UsuallyPrice>{productPrice}</S.UsuallyPrice>
               </>
             ) : (
               <S.ActualPriceBox>
