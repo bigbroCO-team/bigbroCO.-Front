@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CBWASLogo = () => (
   <svg
     width='5.125rem'
