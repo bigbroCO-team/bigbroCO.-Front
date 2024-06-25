@@ -1,7 +1,7 @@
 const BigbroCompanyLogo = () => (
   <svg
-    width='224'
-    height='19'
+    width='14rem'
+    height='1.1875rem'
     viewBox='0 0 224 19'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
