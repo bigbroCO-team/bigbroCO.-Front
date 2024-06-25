@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import React from 'react';
-import { Provider } from 'share-components';
+import { Provider } from 'shared';
 
 const preview: Preview = {
   parameters: {

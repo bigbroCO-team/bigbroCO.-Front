@@ -38,9 +38,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
-      share-components:
+      shared:
         specifier: workspace:^
-        version: link:../../packages/share-components
+        version: link:../../packages/shared
       tsconfig:
         specifier: workspace:^
         version: link:../../packages/tsconfig
@@ -75,9 +75,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
-      share-components:
+      shared:
         specifier: workspace:^
-        version: link:../../packages/share-components
+        version: link:../../packages/shared
       tsconfig:
         specifier: workspace:^
         version: link:../../packages/tsconfig
@@ -106,9 +106,9 @@ importers:
 
   apps/storybook:
     dependencies:
-      share-components:
+      shared:
         specifier: workspace:^
-        version: link:../../packages/share-components
+        version: link:../../packages/shared
       tsconfig:
         specifier: workspace:^
         version: link:../../packages/tsconfig
@@ -171,7 +171,7 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
 
-  packages/share-components:
+  packages/shared:
     dependencies:
       tsconfig:
         specifier: workspace:^

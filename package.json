@@ -6,7 +6,7 @@
     "storybook": "pnpm --filter storybook",
     "tsconfig": "pnpm --filter tsconfig",
     "eslint-config-custom": "pnpm --filter eslint-config-custom",
-    "share-components": "pnpm --filter share-components"
+    "shared": "pnpm --filter shared"
   },
   "private": true,
   "license": "MIT",

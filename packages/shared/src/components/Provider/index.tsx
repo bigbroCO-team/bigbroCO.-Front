@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { GlobalStyle, theme } from 'share-components/styles';
+import { GlobalStyle, theme } from 'shared/styles';
 
 interface Props {
   readonly children: React.ReactNode;
