@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
-    "tsconfig": "workspace:^"
+    "next": "14.1.4"
+  },
+  "devDependencies": {
+    "tsconfig": "^7.0.0"
   }
 }
