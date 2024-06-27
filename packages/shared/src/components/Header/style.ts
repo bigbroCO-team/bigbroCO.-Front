@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 export const Container = styled.header<{ type: number; path: string | null }>`
   display: flex;
@@ -24,6 +25,7 @@ export const Nav = styled.nav<{ type: string; path: string | null }>`
     }
     return path === type ? theme.color.main[50] : theme.color.grey[500];
   }};
-  font-family: 'ImFellGreatPrimer';
   ${({ theme }) => theme.typo.titleSmall};
 `;
+
+export const LogoWapper = styled(Link)``;
