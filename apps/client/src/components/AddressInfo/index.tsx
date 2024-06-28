@@ -40,7 +40,7 @@ const AddressInfo: React.FC<Props> = ({
           <S.InfoButton onClick={() => infoDelete()}>삭제</S.InfoButton>
         </S.InfoButtonContainer>
         <S.IsSelectButton
-          state={selected}
+          selected={selected}
           onClick={() => setSelected((prev) => !prev)}
         >
           선택
