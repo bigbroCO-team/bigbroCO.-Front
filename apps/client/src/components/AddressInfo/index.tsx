@@ -20,17 +20,12 @@ const AddressInfo: React.FC<Props> = ({
 }) => {
   const [selected, setSelected] = useState(IsSelected);
 
-  const clickHandler = (mode: string) => {
-    switch (mode) {
-      case 'modify':
-        alert(`modify ${Id}`);
-        break;
-      case 'delete':
-        alert(`delete ${Id}`);
-        break;
-      case 'select':
-        setSelected((prev) => !prev);
-    }
+  const infoModify = () => {
+    alert(`modify ${Id}`);
+  };
+
+  const infoDelete = () => {
+    alert(`modify ${Id}`);
   };
 
   return (
@@ -41,16 +36,12 @@ const AddressInfo: React.FC<Props> = ({
       <div>{Detail}</div>
       <S.ButtonContainer>
         <S.InfoButtonContainer>
-          <S.InfoButton onClick={() => clickHandler('modify')}>
-            수정
-          </S.InfoButton>
-          <S.InfoButton onClick={() => clickHandler('delete')}>
-            삭제
-          </S.InfoButton>
+          <S.InfoButton onClick={() => infoModify()}>수정</S.InfoButton>
+          <S.InfoButton onClick={() => infoDelete()}>삭제</S.InfoButton>
         </S.InfoButtonContainer>
         <S.IsSelectButton
           state={selected}
-          onClick={() => clickHandler('select')}
+          onClick={() => setSelected((prev) => !prev)}
         >
           선택
         </S.IsSelectButton>
