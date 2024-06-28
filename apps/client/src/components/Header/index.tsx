@@ -9,9 +9,11 @@ const Header = () => {
     router.push(props);
   };
   const [scrollValue, setScrollValue] = useState(0);
-  window.addEventListener('scroll', () => {
-    setScrollValue(window.scrollY);
-  });
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', () => {
+      setScrollValue(window.scrollY);
+    });
+  }
   const clientNavigator = ['CBWAS', 'S.C.B', 'BIGBRO', 'GONGNEWGI', 'SCULFEE'];
 
   return (
