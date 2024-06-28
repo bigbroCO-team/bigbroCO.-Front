@@ -3,12 +3,19 @@ import styled from '@emotion/styled';
 export const Container = styled.header<{ type: number; path: string | null }>`
   display: flex;
   position: fixed;
+  top: 0;
   width: 100%;
   padding: 1.5rem 0;
   justify-content: space-around;
   align-items: flex-end;
-  background: ${({ theme, type, path }) =>
-    path !== null && type > window.innerHeight ? theme.color.black : null};
+  background: ${({ theme, type, path }) => {
+    if (typeof window !== 'undefined') {
+      return path !== null && type > window.innerHeight
+        ? theme.color.black
+        : null;
+    }
+    return null;
+  }};
 `;
 
 export const NavWrapper = styled.div`

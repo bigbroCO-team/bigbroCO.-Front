@@ -2,16 +2,19 @@ import { useRouter, useSelectedLayoutSegment } from 'next/navigation';
 import * as S from './style';
 import { useState } from 'react';
 
-export const Header = () => {
+const Header = () => {
   const router = useRouter();
   const segment = useSelectedLayoutSegment();
   const navigator = (props: string) => {
     router.push(props);
   };
   const [scrollValue, setScrollValue] = useState(0);
-  window.addEventListener('scroll', () => {
-    setScrollValue(window.scrollY);
-  });
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', () => {
+      setScrollValue(window.scrollY);
+    });
+  }
+  const clientNavigator = ['CBWAS', 'S.C.B', 'BIGBRO', 'GONGNEWGI', 'SCULFEE'];
 
   return (
     <>
@@ -20,41 +23,16 @@ export const Header = () => {
           BIGBRO COMPANY
         </S.Nav>
         <S.NavWrapper>
-          <S.Nav
-            type={'CBWAS'}
-            path={segment}
-            onClick={() => navigator(`/CBWAS`)}
-          >
-            CBWAS
-          </S.Nav>
-          <S.Nav
-            type={'S.C.B'}
-            path={segment}
-            onClick={() => navigator(`/S.C.B`)}
-          >
-            S.C.B
-          </S.Nav>
-          <S.Nav
-            type={'BIGBRO'}
-            path={segment}
-            onClick={() => navigator(`/BIGBRO`)}
-          >
-            BIGBRO
-          </S.Nav>
-          <S.Nav
-            type={'GONGNEWGI'}
-            path={segment}
-            onClick={() => navigator(`/GONGNEWGI`)}
-          >
-            GONGNEWGI
-          </S.Nav>
-          <S.Nav
-            type={'SCULFEE'}
-            path={segment}
-            onClick={() => navigator(`/SCULFEE`)}
-          >
-            SCULFEE
-          </S.Nav>
+          {clientNavigator.map((client, idx) => (
+            <S.Nav
+              key={idx}
+              type={client}
+              path={segment}
+              onClick={() => navigator(`/${client}`)}
+            >
+              {client}
+            </S.Nav>
+          ))}
         </S.NavWrapper>
         <S.Nav
           type={'Login'}

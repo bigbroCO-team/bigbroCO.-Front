@@ -4,7 +4,8 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "paths": {
-      "admin/*": ["./src/*"]
+      "admin/*": ["./src/*"],
+      "share-components/*": ["../../packages/share-components/src/*"]
     }
   }
 }
