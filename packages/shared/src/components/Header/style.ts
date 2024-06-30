@@ -14,6 +14,23 @@ export const Container = styled.header<{
   align-items: center;
   justify-content: space-between;
 
+  ${({ type, theme }) => {
+    if (type === 'client_white')
+      return css`
+        background-color: ${theme.color.white};
+      `;
+
+    if (type === 'client_img')
+      return css`
+        background-image: url('../../assets/png/headerImg.png');
+      `;
+
+    if (type === 'admin' || type === 'client_black')
+      return css`
+        background-color: ${theme.color.black};
+      `;
+  }};
+
   // type에 맞는 컬려 변경 로직
   ${({ theme, type }) =>
     type === 'client_white'
