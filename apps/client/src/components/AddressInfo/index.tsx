@@ -30,10 +30,10 @@ const AddressInfo: React.FC<Props> = ({
 
   return (
     <S.Container state={selected}>
-      <div>{AddressName}</div>
-      <div>{PhoneNumber}</div>
-      <div>{Address}</div>
-      <div>{Detail}</div>
+      <S.TitleSmall>{AddressName}</S.TitleSmall>
+      <S.BodySmall>{PhoneNumber}</S.BodySmall>
+      <S.BodySmall>{Address}</S.BodySmall>
+      <S.BodySmall>{Detail}</S.BodySmall>
       <S.ButtonContainer>
         <S.InfoButtonContainer>
           <S.InfoButton onClick={() => infoModify()}>수정</S.InfoButton>

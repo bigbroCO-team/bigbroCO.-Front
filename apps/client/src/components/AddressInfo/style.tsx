@@ -13,19 +13,14 @@ export const Container = styled.div<{ state: boolean }>`
   border: ${({ state, theme }) =>
     state ? `0.0625rem solid ${theme.color.main[50]}` : 'none'};
   gap: 0.75rem;
+`;
 
-  div:nth-child(1) {
-    ${({ theme }) => theme.typo.titleSmall};
-  }
-  div:nth-child(2) {
-    ${({ theme }) => theme.typo.bodySmall};
-  }
-  div:nth-child(3) {
-    ${({ theme }) => theme.typo.bodySmall};
-  }
-  div:nth-child(4) {
-    ${({ theme }) => theme.typo.bodySmall};
-  }
+export const TitleSmall = styled.div`
+  ${({ theme }) => theme.typo.titleSmall};
+`;
+
+export const BodySmall = styled.div`
+  ${({ theme }) => theme.typo.bodySmall};
 `;
 
 export const ButtonContainer = styled.div`
