@@ -11,7 +11,7 @@ export const Container = styled.div<{ state: boolean }>`
   align-items: flex-start;
   color: ${({ theme }) => theme.color.white};
   border: ${({ state, theme }) =>
-    state ? `0.0625rem solid ${theme.color.main[50]}` : null};
+    state ? `0.0625rem solid ${theme.color.main[50]}` : 'none'};
   gap: 0.75rem;
 
   div:nth-child(1) {
